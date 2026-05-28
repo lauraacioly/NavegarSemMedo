@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-offwhite text-texto font-sans;
+  }
+
+  h1, h2, h3 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply font-display text-3xl md:text-4xl font-semibold text-vinho mb-4 leading-tight;
+  }
+
+  .section-subtitle {
+    @apply text-rosa font-semibold text-sm uppercase tracking-widest mb-3;
+  }
+
+  .section-text {
+    @apply text-texto leading-relaxed text-base md:text-lg;
+  }
+
+  .btn-primary {
+    @apply inline-block bg-rosa text-white font-semibold px-6 py-3 rounded-lg
+           hover:bg-vinho transition-colors duration-200 text-sm uppercase tracking-wide;
+  }
+
+  .btn-outline {
+    @apply inline-block border-2 border-rosa text-rosa font-semibold px-6 py-3 rounded-lg
+           hover:bg-rosa hover:text-white transition-colors duration-200 text-sm uppercase tracking-wide;
+  }
+
+  .card {
+    @apply bg-white rounded-xl p-6 shadow-sm border border-bege hover:shadow-md transition-shadow duration-200;
+  }
+
+  .highlight-box {
+    @apply bg-bege border-l-4 border-rosa rounded-r-xl p-5 md:p-6;
+  }
+
+  .alert-box {
+    @apply bg-red-50 border-l-4 border-alerta rounded-r-xl p-5 md:p-6;
+  }
+
+  .step-number {
+    @apply w-8 h-8 rounded-full bg-vinho text-white text-sm font-bold
+           flex items-center justify-center flex-shrink-0;
+  }
+}
